@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{dirtytalk}
+\usepackage{float}
+\usepackage{pgfgantt}
+\usepackage{titlesec}
+\usepackage[acronym]{glossaries}
+\usepackage{subcaption}
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+\begin{document}
+
+\input{content/declaration.tex}
+
+\input{content/abstract.tex}
+
+\input{content/preface.tex}
+
+\input{content/acknowledgement.tex}
+
+
+
+\renewcommand\contentsname{Table of Contents\\}
+\tableofcontents
+\clearpage
+
+\chapter{sdfsd}
+\mychapter{1}{Chapter 1 - Introduction}
+\mychapter{2}{Chapter 2 - Literature Review}
+
+\renewcommand\bibname{References}
+\bibliography{references} 
+\addcontentsline{toc}{chapter}{References}
+\bibliographystyle{ieeetr}
+
+\end{document}
+
