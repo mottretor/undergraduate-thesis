@@ -1,16 +1,17 @@
 \documentclass[12pt,a4paper]{report}
-\usepackage[left=3cm, right=2cm, top=2cm, bottom=2cm]{geometry}
-\usepackage{setspace}
-\usepackage[none]{hyphenat}
-\usepackage{graphicx}
-\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[left=3.7cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{amsmath}
-\usepackage{dirtytalk}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[sort, comma]{natbib}
+\usepackage{url}
+\usepackage{graphicx}
 \usepackage{float}
-\usepackage{pgfgantt}
-\usepackage{titlesec}
-\usepackage[acronym]{glossaries}
-\usepackage{subcaption}
+\usepackage[toc,page]{appendix}
+\usepackage{multirow}
+\usepackage{titling}
+\author{M.A.P.P. Marasinghe}
 
 \newcommand{\mychapter}[2]{
     \setcounter{chapter}{#1}
@@ -19,7 +20,15 @@
     \addcontentsline{toc}{chapter}{#2}
 }
 
+\linespread{2}
+\graphicspath{ {images/} }
+
 \begin{document}
+
+\input{content/title_page.tex}
+\clearpage
+
+\input{content/cover.tex}
 
 \input{content/declaration.tex}
 
