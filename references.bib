@@ -36,3 +36,50 @@
 	doi = {10.1007/978-3-642-11674-2_14},
 	pages = {307--332}
 }
+
+@article{Kehtarnavaz2008,
+author = {Kehtarnavaz, Nasser},
+doi = {10.1016/b978-0-12-374490-6.00007-6},
+journal = {Digital Signal Processing System Design},
+pages = {175--196},
+title = {{Frequency Domain Processing}},
+volume = {1},
+year = {2008}
+}
+
+@article{Ke2005,
+author = {Ke, Yan and Hoiem, Derek and Sukthankar, Rahul},
+doi = {10.1109/CVPR.2005.105},
+isbn = {0769523722},
+journal = {Proceedings - 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, CVPR 2005},
+pages = {597--604},
+title = {{Computer vision for music identification}},
+volume = {I},
+year = {2005}
+}
+
+@techreport{Sears2006,
+abstract = {Application designers must decide whether to store large objects (BLOBs) in a filesystem or in a database. Generally, this decision is based on factors such as application simplicity or manageability. Often, system performance affects these factors. Folklore tells us that databases efficiently handle large numbers of small objects, while filesystems are more efficient for large objects. Where is the break-even point? When is accessing a BLOB stored as a file cheaper than accessing a BLOB stored as a database record? The simple answer is: BLOBs smaller than 256KB are more efficiently handled by a database, while a filesystem is more efficient for those greater than 1MB. Of course, this will vary between different databases and filesystems. By measuring the performance of a storage server that mimics common workloads we found that the break-even point depends on many factors. However, our experiments suggest that storage age, the ratio of bytes in deleted objects to bytes in live objects, is dominant. As storage age increases, fragmentation tends to increase. The filesystem we study has better fragmentation control than the database we used, suggesting the database system would benefit from incorporating ideas from filesystem design. Conversely, filesystem performance may be improved by using database techniques to handle many small files. Surprisingly, for these studies, when average object size is held constant, the distribution of object sizes did not significantly affect performance. We also found that, in addition to low percentage free space, a low ratio of free space to average object size leads to fragmentation and performance degradation.},
+author = {Sears, Russell and {Van Ingen}, Catharine and Gray, Jim},
+title = {{To BLOB or Not To BLOB: Large Object Storage in a Database or a Filesystem?}},
+year = {2006}
+}
+
+@techreport{Muja,
+abstract = {For many computer vision problems, the most time consuming component consists of nearest neighbor matching in high-dimensional spaces. There are no known exact algorithms for solving these high-dimensional problems that are faster than linear search. Approximate algorithms are known to provide large speedups with only minor loss in accuracy, but many such algorithms have been published with only minimal guidance on selecting an algorithm and its parameters for any given problem. In this paper, we describe a system that answers the question, "What is the fastest approximate nearest-neighbor algorithm for my data?" Our system will take any given dataset and desired degree of precision and use these to automatically determine the best algorithm and parameter values. We also describe a new algorithm that applies priority search on hierarchical k-means trees, which we have found to provide the best known performance on many datasets. After testing a range of alternatives, we have found that multiple randomized k-d trees provide the best performance for other datasets. We are releasing public domain code that implements these approaches. This library provides about one order of magnitude improvement in query time over the best previously available software and provides fully automated parameter selection.},
+author = {Muja, Marius and Lowe, David G},
+title = {{FAST APPROXIMATE NEAREST NEIGHBORS WITH AUTOMATIC ALGORITHM CONFIGURATION}}
+}
+
+@article{Lowe2004,
+author = {Lowe, David G.},
+doi = {10.1023/B:VISI.0000029664.99615.94},
+issn = {09205691},
+journal = {International Journal of Computer Vision},
+keywords = {Image matching,Invariant features,Object recognition,Scale invariance},
+number = {2},
+pages = {91--110},
+title = {{Distinctive image features from scale-invariant keypoints}},
+volume = {60},
+year = {2004}
+}
