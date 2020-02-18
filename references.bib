@@ -21,85 +21,85 @@
 }
 
 @incollection{SerraBook,
-	address = {Berlin, Heidelberg},
-	title = {Audio {Cover} {Song} {Identification} and {Similarity}: {Background}, {Approaches}, {Evaluation}, and {Beyond}},
-	volume = {274},
-	isbn = {978-3-642-11673-5 978-3-642-11674-2},
-	shorttitle = {Audio {Cover} {Song} {Identification} and {Similarity}},
-	url = {http://link.springer.com/10.1007/978-3-642-11674-2_14},
-	urldate = {2019-02-27},
-	booktitle = {Advances in {Music} {Information} {Retrieval}},
-	publisher = {Springer Berlin Heidelberg},
-	author = {Serrà, Joan and Gómez, Emilia and Herrera, Perfecto},
-	editor = {Kacprzyk, Janusz and Raś, Zbigniew W. and Wieczorkowska, Alicja A.},
-	year = {2010},
-	doi = {10.1007/978-3-642-11674-2_14},
-	pages = {307--332}
+address = {Berlin, Heidelberg},
+title = {Audio {Cover} {Song} {Identification} and {Similarity}: {Background}, {Approaches}, {Evaluation}, and {Beyond}},
+volume = {274},
+isbn = {978-3-642-11673-5 978-3-642-11674-2},
+shorttitle = {Audio {Cover} {Song} {Identification} and {Similarity}},
+url = {http://link.springer.com/10.1007/978-3-642-11674-2_14},
+urldate = {2019-02-27},
+booktitle = {Advances in {Music} {Information} {Retrieval}},
+publisher = {Springer Berlin Heidelberg},
+author = {Serrà, Joan and Gómez, Emilia and Herrera, Perfecto},
+editor = {Kacprzyk, Janusz and Raś, Zbigniew W. and Wieczorkowska, Alicja A.},
+year = {2010},
+doi = {10.1007/978-3-642-11674-2_14},
+pages = {307--332}
 }
 
 @article{Kehtarnavaz2008,
-author = {Kehtarnavaz, Nasser},
-doi = {10.1016/b978-0-12-374490-6.00007-6},
-journal = {Digital Signal Processing System Design},
-pages = {175--196},
-title = {{Frequency Domain Processing}},
-volume = {1},
-year = {2008}
+	author = {Kehtarnavaz, Nasser},
+	doi = {10.1016/b978-0-12-374490-6.00007-6},
+	journal = {Digital Signal Processing System Design},
+	pages = {175--196},
+	title = {{Frequency Domain Processing}},
+	volume = {1},
+	year = {2008}
 }
 
 @article{Ke2005,
-author = {Ke, Yan and Hoiem, Derek and Sukthankar, Rahul},
-doi = {10.1109/CVPR.2005.105},
-isbn = {0769523722},
-journal = {Proceedings - 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, CVPR 2005},
-pages = {597--604},
-title = {{Computer vision for music identification}},
-volume = {I},
-year = {2005}
+	author = {Ke, Yan and Hoiem, Derek and Sukthankar, Rahul},
+	doi = {10.1109/CVPR.2005.105},
+	isbn = {0769523722},
+	journal = {Proceedings - 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, CVPR 2005},
+	pages = {597--604},
+	title = {{Computer vision for music identification}},
+	volume = {I},
+	year = {2005}
 }
 
 @techreport{Sears2006,
-abstract = {Application designers must decide whether to store large objects (BLOBs) in a filesystem or in a database. Generally, this decision is based on factors such as application simplicity or manageability. Often, system performance affects these factors. Folklore tells us that databases efficiently handle large numbers of small objects, while filesystems are more efficient for large objects. Where is the break-even point? When is accessing a BLOB stored as a file cheaper than accessing a BLOB stored as a database record? The simple answer is: BLOBs smaller than 256KB are more efficiently handled by a database, while a filesystem is more efficient for those greater than 1MB. Of course, this will vary between different databases and filesystems. By measuring the performance of a storage server that mimics common workloads we found that the break-even point depends on many factors. However, our experiments suggest that storage age, the ratio of bytes in deleted objects to bytes in live objects, is dominant. As storage age increases, fragmentation tends to increase. The filesystem we study has better fragmentation control than the database we used, suggesting the database system would benefit from incorporating ideas from filesystem design. Conversely, filesystem performance may be improved by using database techniques to handle many small files. Surprisingly, for these studies, when average object size is held constant, the distribution of object sizes did not significantly affect performance. We also found that, in addition to low percentage free space, a low ratio of free space to average object size leads to fragmentation and performance degradation.},
-author = {Sears, Russell and {Van Ingen}, Catharine and Gray, Jim},
-title = {{To BLOB or Not To BLOB: Large Object Storage in a Database or a Filesystem?}},
-year = {2006}
+	abstract = {Application designers must decide whether to store large objects (BLOBs) in a filesystem or in a database. Generally, this decision is based on factors such as application simplicity or manageability. Often, system performance affects these factors. Folklore tells us that databases efficiently handle large numbers of small objects, while filesystems are more efficient for large objects. Where is the break-even point? When is accessing a BLOB stored as a file cheaper than accessing a BLOB stored as a database record? The simple answer is: BLOBs smaller than 256KB are more efficiently handled by a database, while a filesystem is more efficient for those greater than 1MB. Of course, this will vary between different databases and filesystems. By measuring the performance of a storage server that mimics common workloads we found that the break-even point depends on many factors. However, our experiments suggest that storage age, the ratio of bytes in deleted objects to bytes in live objects, is dominant. As storage age increases, fragmentation tends to increase. The filesystem we study has better fragmentation control than the database we used, suggesting the database system would benefit from incorporating ideas from filesystem design. Conversely, filesystem performance may be improved by using database techniques to handle many small files. Surprisingly, for these studies, when average object size is held constant, the distribution of object sizes did not significantly affect performance. We also found that, in addition to low percentage free space, a low ratio of free space to average object size leads to fragmentation and performance degradation.},
+	author = {Sears, Russell and {Van Ingen}, Catharine and Gray, Jim},
+	title = {{To BLOB or Not To BLOB: Large Object Storage in a Database or a Filesystem?}},
+	year = {2006}
 }
 
 @techreport{Muja,
-abstract = {For many computer vision problems, the most time consuming component consists of nearest neighbor matching in high-dimensional spaces. There are no known exact algorithms for solving these high-dimensional problems that are faster than linear search. Approximate algorithms are known to provide large speedups with only minor loss in accuracy, but many such algorithms have been published with only minimal guidance on selecting an algorithm and its parameters for any given problem. In this paper, we describe a system that answers the question, "What is the fastest approximate nearest-neighbor algorithm for my data?" Our system will take any given dataset and desired degree of precision and use these to automatically determine the best algorithm and parameter values. We also describe a new algorithm that applies priority search on hierarchical k-means trees, which we have found to provide the best known performance on many datasets. After testing a range of alternatives, we have found that multiple randomized k-d trees provide the best performance for other datasets. We are releasing public domain code that implements these approaches. This library provides about one order of magnitude improvement in query time over the best previously available software and provides fully automated parameter selection.},
-author = {Muja, Marius and Lowe, David G},
-title = {{Fast Approximate Nearest Neighbors with Automatic Algorithm Configuration}}
+	abstract = {For many computer vision problems, the most time consuming component consists of nearest neighbor matching in high-dimensional spaces. There are no known exact algorithms for solving these high-dimensional problems that are faster than linear search. Approximate algorithms are known to provide large speedups with only minor loss in accuracy, but many such algorithms have been published with only minimal guidance on selecting an algorithm and its parameters for any given problem. In this paper, we describe a system that answers the question, "What is the fastest approximate nearest-neighbor algorithm for my data?" Our system will take any given dataset and desired degree of precision and use these to automatically determine the best algorithm and parameter values. We also describe a new algorithm that applies priority search on hierarchical k-means trees, which we have found to provide the best known performance on many datasets. After testing a range of alternatives, we have found that multiple randomized k-d trees provide the best performance for other datasets. We are releasing public domain code that implements these approaches. This library provides about one order of magnitude improvement in query time over the best previously available software and provides fully automated parameter selection.},
+	author = {Muja, Marius and Lowe, David G},
+	title = {{Fast Approximate Nearest Neighbors with Automatic Algorithm Configuration}}
 }
 
 @article{Lowe2004,
-author = {Lowe, David G.},
-doi = {10.1023/B:VISI.0000029664.99615.94},
-issn = {09205691},
-journal = {International Journal of Computer Vision},
-keywords = {Image matching,Invariant features,Object recognition,Scale invariance},
-number = {2},
-pages = {91--110},
-title = {{Distinctive image features from scale-invariant keypoints}},
-volume = {60},
-year = {2004}
+	author = {Lowe, David G.},
+	doi = {10.1023/B:VISI.0000029664.99615.94},
+	issn = {09205691},
+	journal = {International Journal of Computer Vision},
+	keywords = {Image matching,Invariant features,Object recognition,Scale invariance},
+	number = {2},
+	pages = {91--110},
+	title = {{Distinctive image features from scale-invariant keypoints}},
+	volume = {60},
+	year = {2004}
 }
 
 @inproceedings{query_by_humming,
-	address = {San Francisco, California, United States},
-	title = {Query by humming: musical information retrieval in an audio database},
-	isbn = {978-0-89791-751-3},
-	shorttitle = {Query by humming},
-	url = {http://portal.acm.org/citation.cfm?doid=217279.215273},
-	doi = {10.1145/217279.215273},
-	abstract = {The emergence of audio and video data types in databases will require new information retrieval methods adapted to the speciﬁc characteristics and needs of these data types. An effective and natural way of querying a musical audio database is by humming the tune of a song. In this paper, a system for querying an audio database by humming is described along with a scheme for representing the melodic information in a song as relative pitch changes. Relevant difﬁculties involved with tracking pitch are enumerated, along with the approach we followed, and the performance results of system indicating its effectiveness are presented.},
-	language = {en},
-	urldate = {2019-08-02},
-	booktitle = {Proceedings of the third {ACM} international conference on {Multimedia}  - {MULTIMEDIA} '95},
-	publisher = {ACM Press},
-	author = {Ghias, Asif and Logan, Jonathan and Chamberlin, David and Smith, Brian C.},
-	year = {1995},
-	pages = {231--236},
-	file = {Ghias et al. - 1995 - Query by humming musical information retrieval in.pdf:C\:\\Users\\pasin\\Zotero\\storage\\URGT34HU\\Ghias et al. - 1995 - Query by humming musical information retrieval in.pdf:application/pdf}
+address = {San Francisco, California, United States},
+title = {Query by humming: musical information retrieval in an audio database},
+isbn = {978-0-89791-751-3},
+shorttitle = {Query by humming},
+url = {http://portal.acm.org/citation.cfm?doid=217279.215273},
+doi = {10.1145/217279.215273},
+abstract = {The emergence of audio and video data types in databases will require new information retrieval methods adapted to the speciﬁc characteristics and needs of these data types. An effective and natural way of querying a musical audio database is by humming the tune of a song. In this paper, a system for querying an audio database by humming is described along with a scheme for representing the melodic information in a song as relative pitch changes. Relevant difﬁculties involved with tracking pitch are enumerated, along with the approach we followed, and the performance results of system indicating its effectiveness are presented.},
+language = {en},
+urldate = {2019-08-02},
+booktitle = {Proceedings of the third {ACM} international conference on {Multimedia}  - {MULTIMEDIA} '95},
+publisher = {ACM Press},
+author = {Ghias, Asif and Logan, Jonathan and Chamberlin, David and Smith, Brian C.},
+year = {1995},
+pages = {231--236},
+file = {Ghias et al. - 1995 - Query by humming musical information retrieval in.pdf:C\:\\Users\\pasin\\Zotero\\storage\\URGT34HU\\Ghias et al. - 1995 - Query by humming musical information retrieval in.pdf:application/pdf}
 }
 
 @article{comparative_query_by_humming,
@@ -120,19 +120,19 @@ year = {2004}
 }
 
 @inproceedings{STFT_and_SIFT,
-	address = {Firenze, Italy},
-	title = {A novel audio fingerprinting method robust to time scale modification and pitch shifting},
-	isbn = {978-1-60558-933-6},
-	url = {http://dl.acm.org/citation.cfm?doid=1873951.1874130},
-	doi = {10.1145/1873951.1874130},
-	abstract = {A novel audio ﬁngerprinting method that is highly robust to Time Scale Modiﬁcation (TSM) and pitch shifting is proposed. Instead of simply employing spectral or tempo-related features, our system is based on computer-vision techniques. We transform each 1-D audio signal into a 2-D image and treat TSM and pitch shifting of the audio signal as stretch and translation of the corresponding image. Robust local descriptors are extracted from the image and matched against those of the reference audio signals. Experimental results show that our system is highly robust to various audio distortions, including the challenging TSM and pitch shifting.},
-	language = {en},
-	urldate = {2019-06-28},
-	booktitle = {Proceedings of the international conference on {Multimedia} - {MM} '10},
-	publisher = {ACM Press},
-	author = {Zhu, Bilei and Li, Wei and Wang, Zhurong and Xue, Xiangyang},
-	year = {2010},
-	pages = {987}
+address = {Firenze, Italy},
+title = {A novel audio fingerprinting method robust to time scale modification and pitch shifting},
+isbn = {978-1-60558-933-6},
+url = {http://dl.acm.org/citation.cfm?doid=1873951.1874130},
+doi = {10.1145/1873951.1874130},
+abstract = {A novel audio ﬁngerprinting method that is highly robust to Time Scale Modiﬁcation (TSM) and pitch shifting is proposed. Instead of simply employing spectral or tempo-related features, our system is based on computer-vision techniques. We transform each 1-D audio signal into a 2-D image and treat TSM and pitch shifting of the audio signal as stretch and translation of the corresponding image. Robust local descriptors are extracted from the image and matched against those of the reference audio signals. Experimental results show that our system is highly robust to various audio distortions, including the challenging TSM and pitch shifting.},
+language = {en},
+urldate = {2019-06-28},
+booktitle = {Proceedings of the international conference on {Multimedia} - {MM} '10},
+publisher = {ACM Press},
+author = {Zhu, Bilei and Li, Wei and Wang, Zhurong and Xue, Xiangyang},
+year = {2010},
+pages = {987}
 }
 
 @article{fusion_similarity,
@@ -163,50 +163,53 @@ year = {2004}
 }
 
 @incollection{cross-similarity_measure,
-	address = {Cham},
-	title = {Cross-{Similarity} {Measurement} of {Music} {Sections}: {A} {Framework} for {Large}-scale {Cover} {Song} {Identification}},
-	volume = {63},
-	isbn = {978-3-319-50208-3 978-3-319-50209-0},
-	shorttitle = {Cross-{Similarity} {Measurement} of {Music} {Sections}},
-	url = {http://link.springer.com/10.1007/978-3-319-50209-0_19},
-	abstract = {For large-scale cover song identiﬁcation, most previous works take a single feature vector as the representation of a song. Although this approach ensures structure invariance, it may cause overcorrection since it totally neglects the structure feature of the song. To address this problem, we put forward a novel framework for large-scale cover song identiﬁcation based on music structure segmentation, aiming at matching the irrelevant sections and ignoring the irrelevant ones. In our implementation, we apply the average and weighted average methods to integrating similarities of section pairs. We evaluate the proposed framework based on three representative previous methods, including 2D Fourier magnitude coeﬃcients, chord proﬁles, and cognition-inspired descriptors. The experimental results show that the all the three methods in our framework signiﬁcantly outperform those in their original works.},
-	language = {en},
-	urldate = {2019-07-08},
-	booktitle = {Advances in {Intelligent} {Information} {Hiding} and {Multimedia} {Signal} {Processing}},
-	publisher = {Springer International Publishing},
-	author = {Cai, Kang and Yang, Deshun and Chen, Xiaoou},
-	editor = {Pan, Jeng-Shyang and Tsai, Pei-Wei and Huang, Hsiang-Cheh},
-	year = {2017},
-	doi = {10.1007/978-3-319-50209-0_19},
-	pages = {151--158}}
+address = {Cham},
+title = {Cross-{Similarity} {Measurement} of {Music} {Sections}: {A} {Framework} for {Large}-scale {Cover} {Song} {Identification}},
+volume = {63},
+isbn = {978-3-319-50208-3 978-3-319-50209-0},
+shorttitle = {Cross-{Similarity} {Measurement} of {Music} {Sections}},
+url = {http://link.springer.com/10.1007/978-3-319-50209-0_19},
+abstract = {For large-scale cover song identiﬁcation, most previous works take a single feature vector as the representation of a song. Although this approach ensures structure invariance, it may cause overcorrection since it totally neglects the structure feature of the song. To address this problem, we put forward a novel framework for large-scale cover song identiﬁcation based on music structure segmentation, aiming at matching the irrelevant sections and ignoring the irrelevant ones. In our implementation, we apply the average and weighted average methods to integrating similarities of section pairs. We evaluate the proposed framework based on three representative previous methods, including 2D Fourier magnitude coeﬃcients, chord proﬁles, and cognition-inspired descriptors. The experimental results show that the all the three methods in our framework signiﬁcantly outperform those in their original works.},
+language = {en},
+urldate = {2019-07-08},
+booktitle = {Advances in {Intelligent} {Information} {Hiding} and {Multimedia} {Signal} {Processing}},
+publisher = {Springer International Publishing},
+author = {Cai, Kang and Yang, Deshun and Chen, Xiaoou},
+editor = {Pan, Jeng-Shyang and Tsai, Pei-Wei and Huang, Hsiang-Cheh},
+year = {2017},
+doi = {10.1007/978-3-319-50209-0_19},
+pages = {151--158}
+}
 
 @incollection{two_layer_model,
-	address = {Cham},
-	title = {Efficient {Two}-{Layer} {Model} {Towards} {Cover} {Song} {Identification}},
-	volume = {10705},
-	isbn = {978-3-319-73599-3 978-3-319-73600-6},
-	url = {http://link.springer.com/10.1007/978-3-319-73600-6_11},
-	language = {en},
-	urldate = {2019-07-08},
-	booktitle = {{MultiMedia} {Modeling}},
-	publisher = {Springer International Publishing},
-	author = {Xu, Xiaoshuo and Cheng, Yao and Chen, Xiaoou and Yang, Deshun},
-	editor = {Schoeffmann, Klaus and Chalidabhongse, Thanarat H. and Ngo, Chong Wah and Aramvith, Supavadee and O’Connor, Noel E. and Ho, Yo-Sung and Gabbouj, Moncef and Elgammal, Ahmed},
-	year = {2018},
-	doi = {10.1007/978-3-319-73600-6_11},
-	pages = {118--128}}
+address = {Cham},
+title = {Efficient {Two}-{Layer} {Model} {Towards} {Cover} {Song} {Identification}},
+volume = {10705},
+isbn = {978-3-319-73599-3 978-3-319-73600-6},
+url = {http://link.springer.com/10.1007/978-3-319-73600-6_11},
+language = {en},
+urldate = {2019-07-08},
+booktitle = {{MultiMedia} {Modeling}},
+publisher = {Springer International Publishing},
+author = {Xu, Xiaoshuo and Cheng, Yao and Chen, Xiaoou and Yang, Deshun},
+editor = {Schoeffmann, Klaus and Chalidabhongse, Thanarat H. and Ngo, Chong Wah and Aramvith, Supavadee and O’Connor, Noel E. and Ho, Yo-Sung and Gabbouj, Moncef and Elgammal, Ahmed},
+year = {2018},
+doi = {10.1007/978-3-319-73600-6_11},
+pages = {118--128}
+}
 
 @article{large-scale,
-	title = {Large-{Scale} {Cover} {Song} {Detection} in {Digital} {Music} {Libraries} {Using} {Metadata}, {Lyrics} and {Audio} {Features}},
-	url = {http://arxiv.org/abs/1808.10351},
-	language = {en},
-	urldate = {2019-07-08},
-	journal = {arXiv:1808.10351 [cs]},
-	author = {Correya, Albin Andrew and Hennequin, Romain and Arcos, Mickaël},
-	month = aug,
-	year = {2018},
-	note = {arXiv: 1808.10351},
-	keywords = {Computer Science - Information Retrieval, Computer Science - Multimedia}}
+title = {Large-{Scale} {Cover} {Song} {Detection} in {Digital} {Music} {Libraries} {Using} {Metadata}, {Lyrics} and {Audio} {Features}},
+url = {http://arxiv.org/abs/1808.10351},
+language = {en},
+urldate = {2019-07-08},
+journal = {arXiv:1808.10351 [cs]},
+author = {Correya, Albin Andrew and Hennequin, Romain and Arcos, Mickaël},
+month = aug,
+year = {2018},
+note = {arXiv: 1808.10351},
+keywords = {Computer Science - Information Retrieval, Computer Science - Multimedia}
+}
 
 @inproceedings{deep_hashing,
 	address = {San Jose, CA, USA},
@@ -221,55 +224,60 @@ year = {2004}
 	author = {Ye, Zhaoqin and Choi, Jaeyoung and Friedland, Gerald},
 	month = mar,
 	year = {2019},
-	pages = {234--239}}
+	pages = {234--239}
+	}
 
 @article{ensemble_based_detection,
-	title = {Ensemble-based cover song detection},
-	url = {http://arxiv.org/abs/1905.11700},
-	language = {en},
-	urldate = {2019-07-08},
-	journal = {arXiv:1905.11700 [cs, eess]},
-	author = {Sarfati, Marc and Hu, Anthony and Donier, Jonathan},
-	month = may,
-	year = {2019},
-	note = {arXiv: 1905.11700}}
+title = {Ensemble-based cover song detection},
+url = {http://arxiv.org/abs/1905.11700},
+language = {en},
+urldate = {2019-07-08},
+journal = {arXiv:1905.11700 [cs, eess]},
+author = {Sarfati, Marc and Hu, Anthony and Donier, Jonathan},
+month = may,
+year = {2019},
+note = {arXiv: 1905.11700}
+}
 
 @article{timbral_shape_sequences,
-	title = {Cover {Song} {Identification} with {Timbral} {Shape} {Sequences}},
-	url = {http://arxiv.org/abs/1507.05143},
-	abstract = {We introduce a novel low level feature for identifying cover songs which quantiﬁes the relative changes in the smoothed frequency spectrum of a song. Our key insight is that a sliding window representation of a chunk of audio can be viewed as a time-ordered point cloud in high dimensions. For corresponding chunks of audio between diﬀerent versions of the same song, these point clouds are approximately rotated, translated, and scaled copies of each other. If we treat MFCC embeddings as point clouds and cast the problem as a relative shape sequence, we are able to correctly identify 42/80 cover songs in the “Covers 80” dataset. By contrast, all other work to date on cover songs exclusively relies on matching note sequences from Chroma derived features.},
-	language = {en},
-	urldate = {2019-07-08},
-	journal = {arXiv:1507.05143 [cs]},
-	author = {Tralie, Christopher J. and Bendich, Paul},
-	month = jul,
-	year = {2015},
-	note = {arXiv: 1507.05143},
-	keywords = {Computer Science - Sound}}
+title = {Cover {Song} {Identification} with {Timbral} {Shape} {Sequences}},
+url = {http://arxiv.org/abs/1507.05143},
+abstract = {We introduce a novel low level feature for identifying cover songs which quantiﬁes the relative changes in the smoothed frequency spectrum of a song. Our key insight is that a sliding window representation of a chunk of audio can be viewed as a time-ordered point cloud in high dimensions. For corresponding chunks of audio between diﬀerent versions of the same song, these point clouds are approximately rotated, translated, and scaled copies of each other. If we treat MFCC embeddings as point clouds and cast the problem as a relative shape sequence, we are able to correctly identify 42/80 cover songs in the “Covers 80” dataset. By contrast, all other work to date on cover songs exclusively relies on matching note sequences from Chroma derived features.},
+language = {en},
+urldate = {2019-07-08},
+journal = {arXiv:1507.05143 [cs]},
+author = {Tralie, Christopher J. and Bendich, Paul},
+month = jul,
+year = {2015},
+note = {arXiv: 1507.05143},
+keywords = {Computer Science - Sound}
+}
 
 @inproceedings{Chord,
-	title = {Audio-{Based} {Cover} {Song} {Retrieval} {Using} {Approximate} {Chord} {Sequences}: {Testing} {Shifts}, {Gaps}, {Swaps} and {Beats}.},
-	volume = {7},
-	shorttitle = {Audio-{Based} {Cover} {Song} {Retrieval} {Using} {Approximate} {Chord} {Sequences}},
-	booktitle = {{ISMIR}},
-	publisher = {Citeseer},
-	author = {Bello, Juan Pablo},
-	year = {2007},
-	pages = {239--244}}
+title = {Audio-{Based} {Cover} {Song} {Retrieval} {Using} {Approximate} {Chord} {Sequences}: {Testing} {Shifts}, {Gaps}, {Swaps} and {Beats}.},
+volume = {7},
+shorttitle = {Audio-{Based} {Cover} {Song} {Retrieval} {Using} {Approximate} {Chord} {Sequences}},
+booktitle = {{ISMIR}},
+publisher = {Citeseer},
+author = {Bello, Juan Pablo},
+year = {2007},
+pages = {239--244}
+}
 
 @article{PCP,
-	title = {Cover song identification with {IF}-{F}0 pitch class profiles},
-	journal = {MIREX extended abstract},
-	author = {Egorov, Alexey and Linetsky, Gene},
-	year = {2008}}
+title = {Cover song identification with {IF}-{F}0 pitch class profiles},
+journal = {MIREX extended abstract},
+author = {Egorov, Alexey and Linetsky, Gene},
+year = {2008}
+}
 
 @inproceedings{Energy,
-	title = {{ARTHUR}: {Retrieving} {Orchestral} {Music} by {Long}-{Term} {Structure}.},
-	shorttitle = {{ARTHUR}},
-	booktitle = {{ISMIR}},
-	author = {Foote, Jonathan},
-	year = {2000},
-	file = {Full Text:C\:\\Users\\pasin\\Zotero\\storage\\ITW74QZM\\Foote - 2000 - ARTHUR Retrieving Orchestral Music by Long-Term S.pdf:application/pdf}
+title = {{ARTHUR}: {Retrieving} {Orchestral} {Music} by {Long}-{Term} {Structure}.},
+shorttitle = {{ARTHUR}},
+booktitle = {{ISMIR}},
+author = {Foote, Jonathan},
+year = {2000},
+file = {Full Text:C\:\\Users\\pasin\\Zotero\\storage\\ITW74QZM\\Foote - 2000 - ARTHUR Retrieving Orchestral Music by Long-Term S.pdf:application/pdf}
 }
 
 @inproceedings{KeyTemplates,
@@ -282,11 +290,11 @@ year = {2004}
 }
 
 @inproceedings{Melody,
-	title = {A {Mid}-level {Melody}-based {Representation} for {Calculating} {Audio} {Similarity}.},
-	booktitle = {{ISMIR}},
-	author = {Marolt, Matija},
-	year = {2006},
-	pages = {280--285}
+title = {A {Mid}-level {Melody}-based {Representation} for {Calculating} {Audio} {Similarity}.},
+booktitle = {{ISMIR}},
+author = {Marolt, Matija},
+year = {2006},
+pages = {280--285}
 }
 
 @inproceedings{PBFV,
