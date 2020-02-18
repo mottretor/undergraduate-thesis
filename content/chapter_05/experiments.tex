@@ -1,2 +1,22 @@
 \section{Experiments}
 \label{section:experiments}
+
+%song dataset
+\subsection{Song Dataset}
+Song dataset consisting 2300 sinhala songs were used in the registration step of the experiment. These 2300 sinhala songs were retrieved from
+\ac{osca} of Sri Lanka which works as the governing organization to ensure intellectual property rights of music in Sri Lanka. 
+
+%query audio samples
+\subsection{Query Audio Samples}
+Variable sized 844 query audio clips were used for the experiment to evaluate the performance of this method
+against different durations. 519 of the above mentioned audio clips had songs which are in the database while 325 audio clips didn't have songs from 
+the database. Hence for each test case, sample size was 844 query audio clips with 0.61492 prevalence.    
+
+%test cases
+\subsection{Test Cases}
+Test cases were created by doing audio distortions to the query audio samples. Performance of the method was evaluated for three main audio distortions
+which are tempo alteration, pitch alteration and both pitch and tempo alteration. Both increased and decreased alterations are considered for three different
+levels of alterations which are 10\% alteration, 20\% alteration and 50\% alteration. Hence there are 3 audio distortions, 2 audio distortion directions and
+3 audio alteration levels, 18 (\(3 \times 2 \times 3\)) test cases were generated to evaluate the performance. 
+
+

@@ -1,0 +1,67 @@
+%test results
+\section{Experiment Results}
+
+The proposed method has an exact way to identify whether a query audio clip has a matching registered song or not. Therefore this method can be considered as
+a classifier. A classifier can be evaluated by the confusion matrix generated for a given sample. \ac{tp}, \ac{fp}, \ac{tn} and \ac{fn} were calculated
+for each test case. Then accuracy and \ac{fp} rate was calculated for each test case. Reducing \ac{fp} rate is significant as same as increasing the accuracy
+given that this method mainly focuses on identifying music on radio broadcasts.   
+
+\subsection{Using Keypoint Count as Threshold}
+
+\begin{table}[H]
+    \begin{tabular}{|l|r|r|r|r|r|r|}
+        \hline
+        \textbf{Test Case}                  & \textbf{TP}   & \textbf{FP} & \textbf{TN} & \textbf{FN} & \textbf{Accuracy} & \textbf{FP Rate} \\ \hline
+        Tempo Increase 10\%                & 509         & 19          & 306         & 10          & 0.96564           & 0.05846          \\ \hline
+        Tempo Increase 20\%                & 509         & 18          & 307         & 10          & 0.96682           & 0.05538          \\ \hline
+        Tempo Increase 50\%                & 497         & 10          & 315         & 22          & 0.96209           & 0.03077          \\ \hline
+        Tempo Decrease 10\%                & 515         & 16          & 309         & 4           & 0.97630           & 0.04923          \\ \hline
+        Tempo Decrease 20\%                & 516         & 19          & 306         & 3           & 0.97393           & 0.05846          \\ \hline
+        Tempo Decrease 50\%                & 517         & 22          & 303         & 2           & 0.97156           & 0.06769          \\ \hline
+        Pitch Increase 10\%                & 514         & 21          & 304         & 5           & 0.96919           & 0.06462          \\ \hline
+        Pitch Increase 20\%                & 513         & 11          & 314         & 6           & 0.97986           & 0.03385          \\ \hline
+        Pitch Increase 50\%                & 7           & 27          & 298         & 512         & 0.36137           & 0.08308          \\ \hline
+        Pitch Decrease 10\%                & 511         & 11          & 314         & 8           & 0.97749           & 0.03385          \\ \hline
+        Pitch Decrease 20\%                & 463         & 4           & 321         & 56          & 0.92891           & 0.01231          \\ \hline
+        Pitch Decrease 50\%                & 0           & 0           & 325         & 519         & 0.38507           & 0.00000          \\ \hline
+        Tempo \& Pitch Increase 10\%      & 414         & 11          & 314         & 105         & 0.86256           & 0.03385          \\ \hline
+        Tempo \& Pitch Increase 20\% & 339         & 18          & 307         & 180         & 0.76540           & 0.05538          \\ \hline
+        Tempo \& Pitch Increase 50\% & 0           & 26          & 299         & 519         & 0.35427           & 0.08000          \\ \hline
+        Tempo \& Pitch Decrease 10\% & 373         & 5           & 320         & 146         & 0.82109           & 0.01538          \\ \hline
+        Tempo \& Pitch Decrease 20\% & 226         & 2           & 323         & 293         & 0.65047           & 0.00615          \\ \hline
+        Tempo \& Pitch Decrease 50\% & 0           & 0           & 325         & 519         & 0.38507           & 0.00000          \\ \hline
+    \end{tabular}
+    \caption{Experiment results using keypoint count as threshold}
+    \label{tab:test_results_keypoint}
+\end{table}
+
+
+\subsection{Using Keypoint Ratio as Threshold}
+
+\begin{table}[H]
+    \begin{tabular}{|l|r|r|r|r|r|r|}
+        \hline
+        \textbf{Test Case}                 & \textbf{TP}   & \textbf{FP} & \textbf{TN} & \textbf{FN} & \textbf{Accuracy} & \textbf{FP Rate} \\ \hline
+        Tempo Increase 10\%                & 512         & 13          & 312         & 7           & 0.97630           & 0.04000          \\ \hline
+        Tempo Increase 20\%                & 508         & 10          & 315         & 11          & 0.97512           & 0.03077          \\ \hline
+        Tempo Increase 50\%                & 501         & 9           & 316         & 18          & 0.96801           & 0.02769          \\ \hline
+        Tempo Decrease 10\%                & 515         & 11          & 314         & 4           & 0.98223           & 0.03385          \\ \hline
+        Tempo Decrease 20\%                & 519         & 10          & 315         & 0           & 0.98815           & 0.03077          \\ \hline
+        Tempo Decrease 50\%                & 519         & 9           & 316         & 0           & 0.98934           & 0.02769          \\ \hline
+        Pitch Increase 10\%                & 519         & 9           & 316         & 0           & 0.98934           & 0.02769          \\ \hline
+        Pitch Increase 20\%                & 517         & 9           & 316         & 2           & 0.98697           & 0.02769          \\ \hline
+        Pitch Increase 50\%                & 0           & 4           & 321         & 519         & 0.38033           & 0.01231          \\ \hline
+        Pitch Decrease 10\%                & 516         & 16          & 309         & 3           & 0.97749           & 0.04923          \\ \hline
+        Pitch Decrease 20\%                & 503         & 25          & 300         & 16          & 0.95142           & 0.07692          \\ \hline
+        Pitch Decrease 50\%                & 23          & 160         & 165         & 496         & 0.22275           & 0.49231          \\ \hline
+        Tempo  \& Pitch Increase 10\%      & 413         & 11          & 314         & 106         & 0.86137           & 0.03385          \\ \hline
+        Tempo  \& Pitch Increase 20\% & 287         & 17          & 308         & 232         & 0.70498           & 0.05231          \\ \hline
+        Tempo  \& Pitch Increase 50\% & 0           & 7           & 318         & 519         & 0.37678           & 0.02154          \\ \hline
+        Tempo  \& Pitch Decrease 10\% & 432         & 28          & 297         & 87          & 0.86374           & 0.08615          \\ \hline
+        Tempo  \& Pitch Decrease 20\% & 346         & 34          & 291         & 173         & 0.75474           & 0.10462          \\ \hline
+        Tempo  \& Pitch Decrease 50\% & 6           & 154         & 171         & 513         & 0.20972           & 0.47385          \\ \hline
+    \end{tabular}
+
+\caption{Experiment results using keypoint ratio as threshold}
+\label{tab:test_results_keypoint_ratio}
+\end{table}
