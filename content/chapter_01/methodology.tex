@@ -32,7 +32,7 @@ frequency domain signal by using \ac{stft} method. \ac{stft} is a sequence of Fo
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.6]{parameters.png}
+  \includegraphics[scale=0.8]{parameters.png}
   \caption{Key parameters on \ac{stft}. 2048 bits long window with 1024 bits long overlapping area.}
   \label{fig:parameters}
 \end{figure}
@@ -91,7 +91,10 @@ fast recreation of the matrix while retrieving\cite{Sears2006}.
 
 \subsubsection{Matching}
 %Final Result
-Flann KD Tree Matching \cite{Muja}.
+Music identification is facilitated by matching a feature matrix of a query audio clip with a feature matrix of a original song. Final goal
+of the matching is to identify the count of keypoints that are matched with the original song. Identification of matching keypoints achieved
+by taking 2 nearest keypoints to a query keypoint and checking whether the distance to the closest keypoint is lesser than 
+the \(0.75 \times \text{distance to the 2nd closest keypoint}\).
 
 \subsubsection{Postprocessing}
 %Variable Tuning
