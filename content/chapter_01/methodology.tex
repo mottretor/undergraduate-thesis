@@ -27,17 +27,17 @@ Processes of the above steps will be discussed in the following subsections.
 
 In default audio data is represented in the time domain. Since even a small change in an audio changes the time domain representation drastically,
 using the time domain representation of the audio to extract features is not recommended. Hence time domain audio signal is converted to
-frequency domain signal by using \gls{stft} method. \gls{stft} is a sequence of Fourier transforms of a windowed signal\cite{Kehtarnavaz2008}.
-2048 bits long window with 50\% overlapping was used as \gls{stft} key parameters as depicted in Figure \ref{fig:parameters}.
+frequency domain signal by using \ac{stft} method. \ac{stft} is a sequence of Fourier transforms of a windowed signal\cite{Kehtarnavaz2008}.
+2048 bits long window with 50\% overlapping was used as \ac{stft} key parameters as depicted in Figure \ref{fig:parameters}.
 
 \begin{figure}[h]
   \centering
   \includegraphics[scale=0.6]{parameters.png}
-  \caption{Key parameters on \gls{stft}. 2048 bits long window with 1024 bits long overlapping area.}
+  \caption{Key parameters on \ac{stft}. 2048 bits long window with 1024 bits long overlapping area.}
   \label{fig:parameters}
 \end{figure}
 
-\gls{stft} is often visualized using its spectrogram\cite{Kehtarnavaz2008}, which is an intensity plot of \gls{stft} magnitude over time. 
+\ac{stft} is often visualized using its spectrogram\cite{Kehtarnavaz2008}, which is an intensity plot of \ac{stft} magnitude over time. 
 The generated spectrogram is converted to a color image as shown in Figure \ref{fig:spectrogram}. Axis labels and ticks are removed to stop
 identification of them as key points in feature extracting step. 
 
@@ -51,7 +51,7 @@ identification of them as key points in feature extracting step.
 \subsubsection{Feature Extracting}
 %SIFT
 
-\gls{stft} spectrogram itself can be considered as an audio descriptor\cite{Ke2005}. This method uses \gls{sift}\cite{Lowe2004} to extract 
+\ac{stft} spectrogram itself can be considered as an audio descriptor\cite{Ke2005}. This method uses \ac{sift}\cite{Lowe2004} to extract 
 the features which are robust to music remastering. In the Figure \ref{fig:compare_spectrogram}, it can be observed that when tempo is
 altered the spectrogram will either expand or compress with the time axis and when pitch is altered the spectrogram will either shift upwards or 
 downwards with the frequency axis. 
@@ -64,11 +64,11 @@ downwards with the frequency axis.
   \label{fig:compare_spectrogram}
 \end{figure}
 
-\gls{sift} is used in computer vision to identify scale invariant features of an image. \gls{sift} features are invariant to image rotation,
-scale alterations and illumination\cite{Lowe2004}. The \gls{sift} feature extractor used in this method consists of four main steps.
+\ac{sift} is used in computer vision to identify scale invariant features of an image. \ac{sift} features are invariant to image rotation,
+scale alterations and illumination\cite{Lowe2004}. The \ac{sift} feature extractor used in this method consists of four main steps.
 \begin{enumerate}
   \item Scale space extrema detection: Gaussian filters of different scales are applied to the image and potential key points are selected
-  as local minima or maxima of the \gls{dog} for multiple scales.
+  as local minima or maxima of the \ac{dog} for multiple scales.
   \item Keypoint localization: Keypoints that have low contrast or those that are poorly located along edges
   are filtered out.
   \item Orientation assignment: One or more orientations are assigned to each keypoint based on local image gradient. 
@@ -77,16 +77,16 @@ scale alterations and illumination\cite{Lowe2004}. The \gls{sift} feature extrac
 \end{enumerate}
 
 A Set of extracted 128 dimensional descriptors works together in describing the input audio file. Extracted 
-\gls{sift} features are invariant to image stretch and translation which makes them better features to be used
+\ac{sift} features are invariant to image stretch and translation which makes them better features to be used
 in audio identification algorithm which is robust to tempo alterations and pitch shifting. 
 
 \subsubsection{Descriptor Storing (Registering)}
-\gls{sift} descriptors of original songs must be stored to use them in the matching step of the remastered
-song identification process. Generally 3-5 minute music clip will have around 2000 key points in its \gls{stft}
+\ac{sift} descriptors of original songs must be stored to use them in the matching step of the remastered
+song identification process. Generally 3-5 minute music clip will have around 2000 key points in its \ac{stft}
 spectrogram. Hence a \(2000\times 128\) matrix will be generated for each original song that will be registered.
 
 The descriptor matrix of each original song is converted to a binary string and that binary string is stored 
-in the database as \gls{blob}s. Converting to binary string and storing the matrix as a \gls{blob} will ensure
+in the database as \ac{blob}s. Converting to binary string and storing the matrix as a \ac{blob} will ensure
 fast recreation of the matrix while retrieving\cite{Sears2006}.   
 
 \subsubsection{Matching}

@@ -9,7 +9,7 @@
 \usepackage[toc,page]{appendix}
 \usepackage{multirow}
 \usepackage{titling}
-\usepackage[acronym]{glossaries}
+\usepackage{acro}
 \usepackage{subcaption}
 \usepackage{array}
 \usepackage{dirtytalk}
@@ -19,8 +19,9 @@
 \linespread{2}
 \graphicspath{ {images/} }
 
-\begin{document}
 \input{content/acronym.tex}
+
+\begin{document}
 
 \input{content/title_page.tex}
 \clearpage
@@ -47,29 +48,37 @@
 \tableofcontents
 \clearpage
 
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+\printacronyms[heading=chapter*, name=List of Acronyms]
+\addcontentsline{toc}{chapter}{List of Acronyms}
+\clearpage
+
 \pagenumbering{arabic}
 
-%introduction Chapter
 \chapter{Introduction}
-\input{content/chapter_01/background_to_the_research.tex}
-\input{content/chapter_01/research_problem_and_questions.tex}
-\input{content/chapter_01/methodology.tex}
-\input{content/chapter_01/outline.tex}
-\input{content/chapter_01/scope.tex}
-\input{content/chapter_01/conclusion.tex}
-
+\input{content/chapter_01/index.tex}
 
 \chapter{Literature Review}
+\label{chapter:lit_review}
+\input{content/chapter_02/index.tex}
+
 
 \chapter{Design}
+\input{content/chapter_03/index.tex}
 
 \chapter{Implementation}
+\input{content/chapter_04/index.tex}
 
 \chapter{Results and Evaluation}
-\section{Experiments}
-\label{section:experiments}
+\input{content/chapter_05/index.tex}
 
 \chapter{Conclusions}
+\input{content/chapter_06/index.tex}
 
 
 \renewcommand\bibname{References}
