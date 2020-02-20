@@ -14,7 +14,7 @@ Hence we have divided our remastered song identification process in to five step
 
 Processes of the above steps will be discussed in the following subsections.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[scale=0.6]{pipeline.png}
     \caption{Remastered Song Identification Process}
@@ -28,12 +28,12 @@ Processes of the above steps will be discussed in the following subsections.
 In default audio data is represented in the time domain. Since even a small change in an audio changes the time domain representation drastically,
 using the time domain representation of the audio to extract features is not recommended. Hence time domain audio signal is converted to
 frequency domain signal by using \ac{stft} method. \ac{stft} is a sequence of Fourier transforms of a windowed signal\cite{Kehtarnavaz2008}.
-2048 bits long window with 50\% overlapping was used as \ac{stft} key parameters as depicted in Figure \ref{fig:parameters}.
+A 2048 bits long window with 50\% overlapping was used as \ac{stft} key parameters as depicted in Figure \ref{fig:parameters}.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.8]{parameters.png}
-  \caption{Key parameters on \ac{stft}. 2048 bits long window with 1024 bits long overlapping area.}
+  \caption{Key parameters on \ac{stft}. A 2048 bits long window with 1024 bits long overlapping area.}
   \label{fig:parameters}
 \end{figure}
 
@@ -41,7 +41,7 @@ frequency domain signal by using \ac{stft} method. \ac{stft} is a sequence of Fo
 The generated spectrogram is converted to a color image as shown in Figure \ref{fig:spectrogram}. Axis labels and ticks are removed to stop
 identification of them as key points in feature extracting step. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{spectrogram.png}
   \caption{Generated colour image of spectrogram after preprocessing.}
@@ -52,14 +52,14 @@ identification of them as key points in feature extracting step.
 %SIFT
 
 \ac{stft} spectrogram itself can be considered as an audio descriptor\cite{Ke2005}. This method uses \ac{sift}\cite{Lowe2004} to extract 
-the features which are robust to music remastering. In the Figure \ref{fig:compare_spectrogram}, it can be observed that when tempo is
+the features which are robust to music remastering. In Figure \ref{fig:compare_spectrogram}, it can be observed that when tempo is
 altered the spectrogram will either expand or compress with the time axis and when pitch is altered the spectrogram will either shift upwards or 
 downwards with the frequency axis. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.6]{spec_transform.png}
-  \caption{Spectrogram transformations on audio enhancements. \textbf{(a)} is the spectrogram image of a original song. \textbf{(b)} 20\% 
+  \caption{Spectrogram transformations on audio enhancements. \textbf{(a)} is the spectrogram image of an original song. \textbf{(b)} 20\% 
   pitch increase, \textbf{(c)} 20\% pitch decrease, \textbf{(d)} 20\% tempo increase and \textbf{(e)} 20\% tempo decrease spectrogram images.}
   \label{fig:compare_spectrogram}
 \end{figure}
@@ -73,10 +73,10 @@ scale alterations and illumination\cite{Lowe2004}. The \ac{sift} feature extract
   are filtered out.
   \item Orientation assignment: One or more orientations are assigned to each keypoint based on local image gradient. 
   \item Keypoint descriptor generation: Orientation histograms are created for 4 x 4 pixel neighborhoods for each keypoint.
-  Each histogram consists 8 bins, hence (4 x 4 x 8) 128 dimensional descriptor is generated.
+  Each histogram consists of 8 bins, hence a (4 x 4 x 8) 128 dimensional descriptor is generated.
 \end{enumerate}
 
-A Set of extracted 128 dimensional descriptors works together in describing the input audio file. Extracted 
+A set of extracted 128 dimensional descriptors works together in describing the input audio file. Extracted 
 \ac{sift} features are invariant to image stretch and translation which makes them better features to be used
 in audio identification algorithm which is robust to tempo alterations and pitch shifting. 
 
@@ -98,7 +98,7 @@ the \(0.75 \times \text{distance to the 2nd closest keypoint}\).
 
 \subsubsection{Postprocessing}
 %Variable Tuning
-the most similar song and matched keypoint count for a given query audio clip is identified in the matching step. But
+The most similar song and matched keypoint count for a given query audio clip is identified in the matching step. But
 it doesn't exactly mean that query audio clip contains that song. Because the number of keypoints that were matched
 represents how much the query song matched to the most similar song. Hence there should be a threshold keypoint count
 to determine whether a query audio clip contains a song in our database or not. But using just a threshold value 
@@ -114,10 +114,10 @@ Based on this keypoint ratio, a threshold is used to determine the validity of t
 threshold value we have used 844 different audio clips with variable durations to match against 2300 original songs.
 Those 844 audio clips had 519 audio clips which had songs and 325 audio clips which didn't have songs from those 
 2300 original songs. And we calculated accuracy for 18 testcases which will be discussed in section 
-\ref{section:experiments}, and took average of those 18 accuracies for variable threshold values. Then results were
+\ref{section:experiments}, and took the average of those 18 accuracies for variable threshold values. Then results were
 illustrated as shown in the Figure \ref{fig:threshold}. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.3]{threshold_adjusting.png}
   \caption{Average Accuracy Values for Different Threshold Values}

@@ -1,6 +1,6 @@
 \section{Architectural Design}
 
-Basic framework to identify music in radio broadcasts is proposed in 
+The basic framework to identify music in radio broadcasts is proposed in 
 \say{Radio Broadcast Monitoring to Ensure Copyright Ownership}\cite{Nishan}. And it's currently
 implemented and deployed in \ac{osca}. Hence the infrastructure to contain the basic framework
 of a radio monitoring system is already there. When different methods of music identification
@@ -15,8 +15,8 @@ will be changed conserving the other modules that are in the architecture as sho
     \label{fig:new_arch}
 \end{figure}
 
-Registering service takes original songs as input and generate specific descriptors to be stored
-in the database. Database stores the generated audio descriptors by registering service in
-retrieval friendly framework to help matching service to retrieve descriptors faster. Matching
-service takes a query audio clip and determine whether that query audio clip contains song registered
+Registering service takes original songs as input and generates specific descriptors to be stored
+in the database. Database stores the generated audio descriptors by the registering service in a
+retrieval friendly framework to help the matching service to retrieve descriptors faster. The matching
+service takes a query audio clip and determines whether that query audio clip contains a song registered
 before.     

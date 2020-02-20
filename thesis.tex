@@ -13,6 +13,50 @@
 \usepackage{subcaption}
 \usepackage{array}
 \usepackage{dirtytalk}
+\usepackage{listings}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{11} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{11}  % for normal
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{deepgrey}{rgb}{0.329, 0.431, 0.478}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+    language=Python,
+    basicstyle=\tiny\ttm,
+    otherkeywords={self},            
+    keywordstyle=\ttb\color{deepblue},
+    emph={MyClass,__init__},          % Custom highlighting
+    emphstyle=\ttb\color{deepred},    % Custom highlighting style
+    stringstyle=\ttm\color{deepgreen},
+    commentstyle=\ttm\color{deepgrey},
+    frame=tb,                        
+    showstringspaces=false,          
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+    \pythonstyle
+    \lstset{#1}
+}{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
 
 \author{M.A.P.P. Marasinghe}
 
@@ -84,6 +128,10 @@
 \bibliography{references} 
 \addcontentsline{toc}{chapter}{References}
 \bibliographystyle{ieeetr}
+
+\begin{appendices}
+    \input{content/appendix.tex}
+\end{appendices}
 
 \end{document}
 

@@ -1,10 +1,12 @@
 \section{Scale Invariant Feature Transform (SIFT) Based Approach}
 
 \subsection{Short Time Fourier Transform}
+\ac{stft} implementation of librosa\cite{librosa} library used to get the
+\ac{stft} spectrogram of the audio signal. Parameters given to off both axis bars
+on generated \ac{stft} spectrogram as spectrogram needed to be isolated.  
 
-\subsection{SIFT Descriptor Extraction}
+\subsection{SIFT Descriptor Extraction and Matching}
+OpenCV\cite{opencv} \ac{sift} implementation was used to identify keypoints and
+generate \ac{sift} descriptors. Brute-force matcher implementation on OpenCV\cite{opencv} was the matcher used 
+to match two \ac{sift} feature vectors. 
 
-\subsection{SIFT Descriptor Matching}
-
-\subsection{Thresholding}
-\label{subsection:thresholding}

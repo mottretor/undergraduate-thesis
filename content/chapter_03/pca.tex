@@ -4,11 +4,11 @@ discussed in the Chapter \ref{chapter:lit_review}. Since there are very low numb
 conducted on sinhala music identification, finding audio features which can differentiate two 
 sinhala songs was required to continue the research. Hence \ac{pca} was conducted to find features
 on a 5000 song dataset extracting 27 different audio features and results were collected for 
-different normalization techniques. \ac{svd} is used to composite multi-dimension features.
+different normalization techniques. \ac{svd} was used to composite multi-dimension features.
 
 \subsection{PCA with Raw Dataset}
 
-Initially a \ac{pca} executed on the raw feature matrix without any normalization technique
+Initially a \ac{pca} was executed on the raw feature matrix without any normalization technique
 which led to the results in Figure \ref{fig:pca_coeff}. Abnormality of the result caused to 
 revisit the feature matrix and need of a normalization technique was identified. 
 
@@ -21,10 +21,10 @@ revisit the feature matrix and need of a normalization technique was identified.
 
 \subsection{PCA with Dataset Normalized by Z-score}
 
-Then \ac{pca} conducted on the dataset which was normalized by z-score. Which produced results
+Then \ac{pca} was conducted on the dataset which was normalized by z-score which produced results
 on Figure \ref{fig:pca_coeff_z}. While analyzing the results, it was observed that results
 indicate uniform variance among the features that was not present in the original feature
-matrix. Hence need of a normalization technique which preserve the variance of a feature 
+matrix. Hence need of a normalization technique which preserve the variance of a feature was
 identified. 
 
 \begin{figure}[H]
@@ -36,9 +36,9 @@ identified.
 
 \subsection{PCA with Dataset Normalized by Rescaling}
 
-Finally dataset was normalized by rescaling and conducted \ac{pca} gave a justifiable result
-which is shown in the Figure \ref{fig:pca_coeff_z}. \say{Area Method of Moments} and \say{Area 
-Method of Moments of MFCCs} have identified as the two features which covers majority of variance
+Finally the dataset was normalized by rescaling and the conducted \ac{pca} gave a justifiable result
+which is shown in Figure \ref{fig:pca_coeff_z}. \say{Area Method of Moments} and \say{Area 
+Method of Moments of MFCCs} are identified as the two features which covers majority of the variance
 in the dataset. 
 
 \begin{figure}[H]
@@ -49,7 +49,7 @@ in the dataset.
 \end{figure}
 
 Then those two features were extracted from audio clips with slight changes to tempo and pitch, in order 
-to check whether those two features show any invariance to pitch or tempo. But when tempo or pitch changed
+to check whether those two features show any invariance to pitch or the tempo. But when tempo or pitch changed
 slightly, \ac{svd} values of those features changed drastically. Therefore results of the \ac{pca} couldn't
 be used to progress on this research which resulted to revisit the literature to find better features to 
 extract. 

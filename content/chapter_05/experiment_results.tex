@@ -4,8 +4,8 @@
 
 The proposed method has an exact way to identify whether a query audio clip has a matching registered song or not. Therefore this method can be considered as
 a classifier. A classifier can be evaluated by the confusion matrix generated for a given sample. \ac{tp}, \ac{fp}, \ac{tn} and \ac{fn} were calculated
-for each test case. Then accuracy and \ac{fp} rate was calculated for each test case. Reducing \ac{fp} rate is significant as same as increasing the accuracy
-given that this method mainly focuses on identifying music on radio broadcasts. accuracy and \ac{fp} rate can be calculated from the formulas given below. 
+for each test case. Then accuracy and \ac{fp} rate was calculated for each test case. Reducing \ac{fp} rate is significant as much as increasing the accuracy
+given that this method mainly focuses on identifying music on radio broadcasts. Accuracy and \ac{fp} rate can be calculated from the formulas given below. 
 
 \begin{align*}
     \text{Accuracy} &= \frac{TP+TN}{TP+TN+FP+FN}\\
@@ -19,12 +19,12 @@ other with keypoint ratio as threshold measure to validate the claim of keypoint
 \subsection{Using Keypoint Count as Threshold}
 
 Average accuracies for different threshold values are illustrated as shown in Figure \ref{fig:threshold_old} to identify the optimal threshold value to use. Since
-the visualization clearly indicate a global peak value which is keypoint count of 69, that value can be used as the threshold value. This threshold value of 69 is
+the visualization clearly indicates a global peak value which is keypoint count of 69, that value can be used as the threshold value. This threshold value of 69 is
 used in this experiment. 
 \vspace{12pt}
 
-Results of the experiment using keypoint count as the threshold measure presented in Table \ref{tab:test_results_keypoint}. There is no clear
-change between accuracies of pitch changes and tempo changes when using keypoint count as threshold measure. Pitch changes and tempo changes
+Results of the experiment using keypoint count as the threshold measure are presented in Table \ref{tab:test_results_keypoint}. There is no clear
+change between accuracies of pitch changes and tempo changes when using keypoint count as the threshold measure. Pitch changes and tempo changes
 up to 20\% alteration can be identified with 92\%-98\% accuracy. 
 
 
@@ -68,13 +68,13 @@ up to 20\% alteration can be identified with 92\%-98\% accuracy.
 \subsection{Using Keypoint Ratio as Threshold}
 
 Average accuracies for different threshold values are illustrated as shown in Figure \ref{fig:threshold_new} to identify the optimal threshold value to use. Since
-the visualization clearly indicate a global peak value which is keypoint count of 0.0403, that value can be used as the threshold value. This threshold value of 
+the visualization clearly indicates a global peak value which is keypoint count of 0.0403, that value can be used as the threshold value. This threshold value of 
 0.0403 is used in this experiment. 
 \vspace{12pt}
 
 Results of the experiment using keypoint ratio as the threshold measure presented in Table \ref{tab:test_results_keypoint_ratio}. It can be observed that accuracies
-have increased considerably compared to results of experiment which uses keypoint count as threshold measure. Which validates the claim of taking keypoint ratio as
-better threshold measure. Pitch changes and tempo changes up to 20\% alteration can be identified with 95\%-99\% accuracy.
+have increased considerably compared to results of the experiment which uses keypoint count as the threshold measure which validates the claim of taking keypoint ratio as
+a better threshold measure. Pitch changes and tempo changes up to 20\% alteration can be identified with 95\%-99\% accuracy.
 
 \begin{figure}[H]
     \centering

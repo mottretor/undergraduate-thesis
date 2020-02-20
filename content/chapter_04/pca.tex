@@ -1,1 +1,12 @@
 \section{Principle Component Analysis (PCA)}
+
+\subsection{Dataset}
+
+Song dataset with 5000 songs were obtained from the \ac{osca} as mp3 files with 320kbps quality. Then
+those 5000 songs were converted to wav format with 16-pcm quality by using ffmpeg library.
+
+\subsection{Features and Tools}
+
+Jaudio library\cite{jaudio} was used to extract 27 different audio features from the song dataset.
+Then \ac{svd} function in Matlab\cite{matlab:2018b} was used to composite multi-dimension features
+to a single value. Finally \ac{pca} implementation in Matlab\cite{matlab:2018b} used to run the \ac{pca}. 

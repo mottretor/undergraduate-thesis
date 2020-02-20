@@ -1,2 +1,14 @@
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
+
+Music identification in radio broadcasts have different use cases like playlist generation
+and protecting copyright ownership of artistes. In real world environments, music is often
+remastered by radio channels to fit in to limited air times. Mostly those remastering
+includes time stretching, pitch shifting and etc. Therefore robustness of the music identification
+method plays a crucial role. 
+\vspace{12pt}
+
+In this dissertation, we propose to use \ac{sift} on \ac{stft} spectrogram to extract audio
+descriptors. Experiments show that \ac{sift} descriptors exhibit robustness against audio 
+distortions such as time stretching and pitch shifting. Finally a ratio based threshold is
+used to differentiate identified and non-identified states.  
