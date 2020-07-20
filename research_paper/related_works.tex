@@ -1,0 +1,75 @@
+\section{Related Work}
+
+Remastered song identification falls under the domain of cover song identification,
+which is a very active area of study in the \gls{mir} community \cite{Serra2010}.
+Literature on cover song identification contains different approaches taken to
+measure and model music similarity in both symbolic and audio domains. Literature
+relevant to cover song identification can be divided into few areas such as
+query-by-humming systems, content-based music retrieval, genre classification
+and audio fingerprinting.
+
+In symbolic domain of cover song identification, symbolic representations of
+musical content is used in content processing. Query-by-humming systems
+\cite{query_by_humming} fall under the symbolic domain as in query-by-humming
+systems music contents are stored and processed in symbolic representations.
+This query-by-humming method is parallel to retrieving cover songs from a song
+database. Even though techniques used in query-by-humming systems could be useful
+in future approaches of cover song identification, these systems can't achieve
+high accuracy on real world audio music signals \cite{comparative_query_by_humming,Serra2010}.
+
+
+Audio domain cover song identification approaches focus on measuring similarity
+of music by exploiting music facets shared between two songs. Extracting invariant
+features is used to exploit shared music facets. Although such extracted descriptors
+are responsible to overcome majority of facet changes, special stress is given for
+achieving tempo, key and structure since those facets are not usually managed by
+the extracted descriptors themselves \cite{Serra2010}. Hence we can look at existing
+literature in terms of feature extraction, tempo invariance, key invariance, structure
+invariance and finally similarity comparison. Furthermore, we can take approaches which fall
+into this general pipeline (refer Figure \ref{fig:general_pipeline}) to look at different techniques used for these stages and
+distinguish each approach from one another by those techniques.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.325]{images/general_pipeline.png}
+    \caption{General Pipeline for Cover Song Identification}
+    \label{fig:general_pipeline}
+\end{figure}
+
+Bello's cover song identification method extracts chord sequences as the feature and
+uses K transpositions for key invariance. Even though there is no technique used
+for structure invariance, \gls{dp} is used for tempo invariance. Finally
+it uses edit distance to compute the similarity \cite{Chord}. Since there is no technique
+used for structure invariance, that method is inefficient against the structural changes
+in cover songs. Egorov proposed another method which uses the same general pipeline with
+extracting \gls{pcp} as the feature. But in this method Egorov uses \gls{oti} for key
+invariance and \gls{dp} is used for both tempo and structural invariance. And match length
+is used for similarity computation \cite{PCP}.
+
+Foote \cite{Energy} and Izmirli \cite{KeyTemplates} introduced two methods which were using
+\gls{dtw} for similarity computation and \gls{dp} for tempo invariance. Both the methods lack
+techniques for key invariance and structure invariance which makes those methods to perform
+inefficient in both key and temporal changes. The feature extracted by Foote is energy spectrum
+while Izmirli extracted key templates. Marlot uses the same techniques for tempo invariance and
+similarity computation which are \gls{dp} and \gls{dtw}, but melody is the extracted feature
+which uses the key estimation for key invariance.
+
+\begin{table}[h]
+    \footnotesize
+    \centering
+    \begin{tabular}{|C|C|C|C|C|C|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Research}} & \textbf{Feature}                   & \textbf{Key Invariance}  & \textbf{Tempo Invariance} & \textbf{Structure Invariance} & \textbf{Similarity Computation} \\\hline
+        \textbf{Bello \cite{Chord}}             & \textbf{Chords}                     & \textbf{K transpositions}  & \textbf{DP}                        & \textbf{ - }                          & \textbf{Edit distance} \\\hline
+        \textbf{Egorov \& Linetsky \cite{PCP}}      & \textbf{PCP}                        & \textbf{OTI}                        & \textbf{DP}                        & \textbf{DP}                        & \textbf{Match length} \\\hline
+        \textbf{Foote \cite{Energy}}            & \textbf{Energy spectral} & \textbf{-}                           & \textbf{DP}                        & \textbf{ - }                          & \textbf{DTW}                       \\ \hline
+        \textbf{Izmiril \cite{KeyTemplates}}    & \textbf{Key templates} & \textbf{-}                           & \textbf{DP}                        & \textbf{ - }                          & \textbf{DTW}                       \\\hline
+        \textbf{Marolt \cite{Melody}}           & \textbf{Melody}                     & \textbf{Key estimation} & \textbf{DP}                        & \textbf{ - }                          & \textbf{DTW}                       \\ \hline
+    \end{tabular}
+    \vspace{12pt}
+    \caption{Cover song identification methods and their techniques used for each step in general pipeline}
+    \label{tab:literature}
+\end{table}
+
+Related works mentioned above for audio domain can be modelled to the general pipeline for cover
+song identification (refer Figure \ref{fig:general_pipeline}) as described in Table \ref{tab:literature}.
